@@ -2,7 +2,8 @@
 /* eslint-disable no-param-reassign */
 import axios from 'axios';
 
-const baseURL = 'http://localhost:8000';
+const baseURL = 'https://phonews-prod.herokuapp.com';
+// const baseURL = 'http://localhost:8000';
 // request interceptor to add the auth token header to requests
 axios.interceptors.request.use(
   (config) => {
