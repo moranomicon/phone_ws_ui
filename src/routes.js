@@ -8,7 +8,6 @@ import NotFound from 'src/pages/NotFound';
 import Register from 'src/pages/Register';
 import Settings from 'src/pages/Settings';
 import PhoneList from './pages/PhoneList';
-import MaterialListView from './pages/MaterialList';
 import RequestPhone from './pages/RequestPhone';
 import LeaveReview from './pages/LeaveReview';
 import ComparePhone from './pages/ComparePhone';
@@ -35,7 +34,6 @@ const routes = [
     children: [
       { path: 'account', element: <Account /> },
       { path: 'customers', element: <CustomerList /> },
-      { path: 'materials', element: <MaterialListView /> },
       { path: 'packing-list', element: <RequestPhone /> },
       { path: 'request', element: <RequestPhone /> },
       { path: 'phone', element: <PhoneList /> },

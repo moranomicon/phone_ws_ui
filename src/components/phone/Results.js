@@ -6,6 +6,7 @@ import MaterialTable from 'material-table';
 import { Box, makeStyles, Card } from '@material-ui/core';
 import tableIcons from 'src/utils/icons';
 import instance from 'src/connection';
+import Search from '@material-ui/icons/Search';
 // import ComparePhone from 'src/pages/ComparePhone';
 import { useNavigate } from 'react-router-dom';
 
@@ -56,7 +57,7 @@ const Results = ({ className, ...rest }) => {
             actions={[
               {
                 tooltip: 'Compare Data',
-                icon: 'Search',
+                icon: Search,
                 onClick: (evt, data) => {
                   // eslint-disable-next-line no-alert
                   if (data.length > 2) alert('Please select two data only!');
