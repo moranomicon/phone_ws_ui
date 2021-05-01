@@ -37,6 +37,7 @@ const PhoneDetails = ({ phone, ...rest }) => (
             </TableCell>
             <TableCell>
               {phone.screen_size}
+              {' '}
               inches
             </TableCell>
           </TableRow>
@@ -101,6 +102,7 @@ const PhoneDetails = ({ phone, ...rest }) => (
             </TableCell>
             <TableCell>
               {phone.battery_capacity}
+              {' '}
               mAh
             </TableCell>
           </TableRow>

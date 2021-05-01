@@ -31,7 +31,7 @@ const LeaveReview = () => {
   }, []);
 
   const onSubmit = (phoneId, reviews, rating) => {
-    instance.post('/phone-reviews/', { phone: phoneId, review: reviews, stars: rating }).then(navigate('/app/my-phone-review/'));
+    instance.post('/phone-reviews/', { phone: phoneId, review: reviews, stars: rating }).then(navigate('app/my-phone-review/'));
   };
 
   return (
