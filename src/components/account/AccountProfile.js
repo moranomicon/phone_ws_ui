@@ -51,7 +51,7 @@ const AccountProfile = (props) => {
           >
             {user.first_name}
             {' '}
-            {user.lastname}
+            {user.last_name}
           </Typography>
           <Typography
             color="textSecondary"

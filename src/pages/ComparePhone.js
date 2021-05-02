@@ -1,10 +1,8 @@
-/* eslint-disable no-unused-vars */
 import { React, useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Box, Container, Grid } from '@material-ui/core';
 import PhoneDetails from 'src/components/phone/PhoneDetails';
 import instance from 'src/connection';
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 
 const getPhoneDetails = (id) => {
@@ -13,7 +11,7 @@ const getPhoneDetails = (id) => {
     .then((res) => res.data[0]);
   return phoneData;
 };
-const ComparePhone = (props) => {
+const ComparePhone = () => {
   const { id1, id2 } = useParams();
 
   const [firstPhone, setFirstPhone] = useState({});
@@ -27,11 +25,6 @@ const ComparePhone = (props) => {
       setIsLoading(false);
     });
   }, []);
-
-  // ciobak2
-  // strict bgt kan gila sih
-
-  // setSecondPhone(phoneTwo);
 
   if (isLoading) return <span>loading...</span>;
 

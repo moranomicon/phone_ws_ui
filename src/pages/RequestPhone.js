@@ -15,7 +15,7 @@ const RequestPhone = () => {
   const navigate = useNavigate();
 
   const onSubmit = (phoneName, phoneDetails) => {
-    instance.post('/phone-request/', { phone_name: phoneName, phone_details: phoneDetails }).then(navigate('app/my-phone-request/'));
+    instance.post('/phone-request/', { phone_name: phoneName, phone_details: phoneDetails }).then(navigate('/app/my-phone-request/'));
   };
 
   return (

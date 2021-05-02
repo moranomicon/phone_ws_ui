@@ -15,6 +15,7 @@ import PhoneRepair from './pages/PhoneRepair';
 import PhoneReview from './pages/PhoneReview';
 import PhoneTransaction from './pages/PhoneTransaction';
 import PhoneRequest from './pages/PhoneRequest';
+import PhoneDetails from './pages/PhoneDetails';
 
 const routes = [
   {
@@ -37,6 +38,7 @@ const routes = [
       { path: 'packing-list', element: <RequestPhone /> },
       { path: 'request', element: <RequestPhone /> },
       { path: 'phone', element: <PhoneList /> },
+      { path: 'phone-detail/:id', element: <PhoneDetails /> },
       { path: 'review', element: <LeaveReview /> },
       { path: 'settings', element: <Settings /> },
       { path: 'compare-phone/:id1/:id2', element: <ComparePhone /> },

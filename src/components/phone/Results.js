@@ -7,7 +7,6 @@ import { Box, makeStyles, Card } from '@material-ui/core';
 import tableIcons from 'src/utils/icons';
 import instance from 'src/connection';
 import Search from '@material-ui/icons/Search';
-// import ComparePhone from 'src/pages/ComparePhone';
 import { useNavigate } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -37,6 +36,10 @@ const Results = ({ className, ...rest }) => {
     navigate(`/app/compare-phone/${data[0].id}/${data[1].id}`);
   };
 
+  // const getPhoneDetails = (id) => {
+  //   navigate(`/app/phone-detail/${id}`);
+  // };
+
   return (
     <Card className={clsx(classes.root, className)} {...rest}>
       <PerfectScrollbar>
@@ -44,6 +47,11 @@ const Results = ({ className, ...rest }) => {
           <MaterialTable
             icons={tableIcons}
             columns={[
+              {
+                title: 'Id',
+                field: 'id',
+                hidden: true
+              },
               { title: 'Name', field: 'name' },
               { title: 'Brand', field: 'brand' }
             ]}
@@ -54,6 +62,7 @@ const Results = ({ className, ...rest }) => {
               exportButton: true,
               selection: true
             }}
+            // onRowClick={(event, rowData) => getPhoneDetails(rowData.id)}
             actions={[
               {
                 tooltip: 'Compare Data',

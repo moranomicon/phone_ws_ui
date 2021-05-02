@@ -18,7 +18,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   const register = (values) => {
-    instance.post('/user/register/', {
+    instance.post('/register/', {
       first_name: values.firstName, last_name: values.lastName, email: values.email, username: values.username, password: values.password
     }).then(() => {
       navigate('/login/');

@@ -11,7 +11,6 @@ import {
   TableRow,
   Typography
 } from '@material-ui/core';
-import instance from 'src/connection';
 
 const PhoneDetails = ({ phone, ...rest }) => (
   <Card {...rest}>
